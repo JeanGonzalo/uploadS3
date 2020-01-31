@@ -6,13 +6,13 @@ const uuidv4 = require('uuidv4');
 const aws = require('aws-sdk')
 const Buffer = require('buffer').Buffer;
 //import { Buffer } from 'buffer';
-
+require("dotenv").config();
 const readFile = util.promisify(fs.readFile);
 const BUCKET_NAME = "bucket000upload";
 
 const s3 = new aws.s3({
-    accessKeyId: "AKIAR6YQIG4K2V4KEFEG",
-    secretAccessKey: "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",
+    accessKeyId: process.env.accessKeyId,
+    secretAccessKey: process.env.secretAccessKey,
     region: 'us-east-2'
 })
 

@@ -1,9 +1,9 @@
 const AWS = require('aws-sdk')
-
+require("dotenv").config();
 const s3 = new AWS.S3()
 AWS.config.update({
-    accessKeyId: 'AKIAR6YQIG4K2V4KEFEG',
-    secretAccessKey: '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',
+    accessKeyId: process.env.accessKeyId,
+    secretAccessKey: process.env.secretAccessKey,
     region: 'us-east-2'
 })
 

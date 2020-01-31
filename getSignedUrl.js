@@ -2,7 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const uuidv4 = require('uuidv4');
 const aws = require('aws-sdk');
-
+require("dotenv").config();
 const app = express();
 
 app.use(express.json());
@@ -13,8 +13,8 @@ const router = express.Router();
 router.post('/getSignedURL', async (req, res, next) => {
     const s3 = new aws.S3();
     s3.config.update({
-        accessKeyId: 'AKIAR6YQIG4K2V4KEFEG',
-        secretAccessKey: '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',
+        accessKeyId: process.env.accessKeyId,
+        secretAccessKey: process.env.secretAccessKey,
         region: 'us-east-2'
     })
 
