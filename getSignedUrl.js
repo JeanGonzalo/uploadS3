@@ -12,12 +12,12 @@ s3.config.update({
 const app = express();
 app.use(express.json());
 //const router = express.Router();
-app.get('/getSignedURL', (req, res, next) => {
+app.get('/getSignedURL', async (req, res, next) => {
     console.log('estas en get')
 
     const params = {
         Bucket: 'bucket000upload',
-        Key: 'file-name.pdf',
+        Key: await 'kolin.jpeg',
         ContentType: 'image/jpeg'
     };
 
