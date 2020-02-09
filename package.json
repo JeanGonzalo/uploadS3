@@ -1,7 +1,6 @@
 {
   "name": "uploadS3",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,9 +10,22 @@
   "license": "ISC",
   "dependencies": {
     "aws-sdk": "^2.610.0",
+    "aws-signature-v4": "^1.4.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "morgan": "^1.9.1",
+    "multer": "^1.4.2",
+    "path": "^0.12.7",
     "uuidv4": "^6.0.2"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JeanGonzalo/uploadS3.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JeanGonzalo/uploadS3/issues"
+  },
+  "homepage": "https://github.com/JeanGonzalo/uploadS3#readme",
+  "description": ""
 }
